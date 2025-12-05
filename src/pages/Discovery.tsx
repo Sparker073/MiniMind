@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Brain, Sparkles, Cpu, Zap, Bot, ChevronDown } from 'lucide-react';
+import { Brain, Sparkles, Zap, ChevronDown } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState, useCallback } from 'react';
 import DiveAnimation from '@/components/DiveAnimation';
@@ -20,10 +20,10 @@ const Discovery = () => {
     setTimeout(() => navigate('/explore'), 1500);
   }, [navigate]);
 
-  const aiConcepts = [
-    { icon: Brain, title: "Machine Learning", desc: "Machines learn from data, just like you learn from experience" },
-    { icon: Bot, title: "Neural Networks", desc: "Digital brains inspired by your own neurons" },
-    { icon: Cpu, title: "Algorithms", desc: "Step-by-step recipes that solve complex puzzles" },
+  const introPoints = [
+    "AI is like giving your computer a brain so it can recognize patterns, answer questions, and even create new things—just like a curious friend who never gets tired.",
+    "On this site, you won't read boring theory; you'll poke, click, and play with tiny AI experiments that show how it really thinks, step by step.",
+    "By the time you finish exploring, \"artificial intelligence\" will feel less like science fiction and more like a fun superpower you actually understand."
   ];
 
   return (
@@ -101,26 +101,24 @@ const Discovery = () => {
               It's not magic, it's math and patterns working together.
             </motion.p>
 
-            {/* Concept cards */}
+            {/* Intro paragraphs */}
             <motion.div
-              className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-10 sm:mb-14"
+              className="space-y-6 mb-10 sm:mb-14 text-left max-w-2xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
             >
-              {aiConcepts.map((concept, index) => (
-                <motion.div
-                  key={concept.title}
-                  className="group p-5 sm:p-6 rounded-2xl bg-card/30 border border-border/30 backdrop-blur-sm hover:border-primary/40 hover:bg-card/50 transition-all duration-300"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.9 + index * 0.1 }}
-                  whileHover={{ y: -5 }}
+              {introPoints.map((point, index) => (
+                <motion.p
+                  key={index}
+                  className="font-inter text-muted-foreground text-sm sm:text-base leading-relaxed"
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.9 + index * 0.15 }}
                 >
-                  <concept.icon className="w-8 h-8 text-primary mb-4 group-hover:scale-110 transition-transform mx-auto" />
-                  <h3 className="font-orbitron text-sm sm:text-base text-foreground mb-2">{concept.title}</h3>
-                  <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{concept.desc}</p>
-                </motion.div>
+                  <span className="text-primary font-medium">→</span>{" "}
+                  {point}
+                </motion.p>
               ))}
             </motion.div>
 

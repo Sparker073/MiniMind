@@ -68,6 +68,12 @@ Key User Flows
 - `AgentWelcome` → `ChatPage` to chat with Gemini via Flask backend
 - `Blank` is a placeholder route
 
+Demo Video
+----------
+Click the thumbnail below to watch the demo:
+
+[![Watch the demo](https://img.youtube.com/vi/SuHxureevws/0.jpg)](https://www.youtube.com/watch?v=SuHxureevws)
+
 Notes
 -----
 - The Flask app requires `GEMINI_API_KEY`; without it, startup will fail.

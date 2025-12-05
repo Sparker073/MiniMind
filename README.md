@@ -70,9 +70,11 @@ Key User Flows
 
 Demo Video
 ----------
-Click the thumbnail below to watch the demo:
-
-[![Watch the demo](https://img.youtube.com/vi/SuHxureevws/0.jpg)](https://www.youtube.com/watch?v=SuHxureevws)
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=SuHxureevws">
+    <img src="https://img.youtube.com/vi/SuHxureevws/0.jpg" width="720"/>
+  </a>
+</p>
 
 Notes
 -----

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import {  ChevronDown } from 'lucide-react';
+import { Brain, Sparkles, Zap, ChevronDown } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState, useCallback } from 'react';
 import DiveAnimation from '@/components/DiveAnimation';
@@ -17,7 +17,7 @@ const Discovery = () => {
       y: rect.top + rect.height / 2
     });
     setIsDiving(true);
-    setTimeout(() => navigate('/explore'), 1500);
+    setTimeout(() => navigate('/agent'), 1500);
   }, [navigate]);
 
   const introPoints = [
@@ -59,7 +59,25 @@ const Discovery = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: isDiving ? 0 : 1 }}
           >
-        
+            {/* Animated icon */}
+            <motion.div
+              className="mb-6 sm:mb-8 relative inline-block"
+              initial={{ scale: 0, rotate: -180 }}
+              animate={{ scale: 1, rotate: 0 }}
+              transition={{ type: "spring", stiffness: 150, delay: 0.3 }}
+            >
+              <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center glow-primary rotate-12">
+                <Zap className="w-10 h-10 sm:w-12 sm:h-12 text-primary -rotate-12" />
+              </div>
+              <motion.div
+                className="absolute -bottom-1 -right-1"
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-secondary" />
+              </motion.div>
+            </motion.div>
+
             {/* Title */}
             <motion.h1
               className="font-orbitron text-2xl sm:text-4xl md:text-5xl text-gradient-neural mb-4 sm:mb-6"

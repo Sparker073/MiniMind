@@ -17,7 +17,7 @@ const Discovery = () => {
       y: rect.top + rect.height / 2
     });
     setIsDiving(true);
-    setTimeout(() => navigate('/explore'), 1500);
+    setTimeout(() => navigate('/agent'), 1500);
   }, [navigate]);
 
   const introPoints = [

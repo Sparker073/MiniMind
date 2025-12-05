@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import axios from 'axios';
-import { NetworkBackground } from '../components/NetworkBackground';
+import  NeuralBackground  from '../components/NeuralBackground';
 
 export default function ChatPage() {
   const [messages, setMessages] = useState([
@@ -94,7 +94,7 @@ export default function ChatPage() {
   return (
     <div className="relative h-screen bg-black overflow-hidden">
       {/* Network Background */}
-      <NetworkBackground />
+      <NeuralBackground />
 
       {/* Header */}
       <div className="absolute top-6 left-8 z-20 flex items-center gap-4">

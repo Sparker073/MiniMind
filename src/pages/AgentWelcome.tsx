@@ -16,7 +16,7 @@ const AgentWelcome = () => {
   const handleContinue = (e: React.MouseEvent) => {
     setClickPosition({ x: e.clientX, y: e.clientY });
     setIsDiving(true);
-    setTimeout(() => navigate('/explore'), 1500);
+    setTimeout(() => navigate('/chat'), 1500);
   };
 
 

@@ -4,7 +4,7 @@ import * as tf from "@tensorflow/tfjs";
 import * as handpose from "@tensorflow-models/handpose";
 import * as fp from "fingerpose";
 import { Hand, Brain, CheckCircle2 } from "lucide-react";
-import { NetworkBackground } from "@/components/NetworkBackground";
+import  NeuralBackground  from "@/components/NeuralBackground";
 
 type HandGameProps = {
   onGameComplete?: () => void;
@@ -294,7 +294,7 @@ const HandGame = ({ onGameComplete }: HandGameProps) => {
     
     <div className="relative min-h-screen overflow-hidden">
       {/* Background */}
-      <NetworkBackground />
+      <NeuralBackground />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen gap-6 w-full px-4">

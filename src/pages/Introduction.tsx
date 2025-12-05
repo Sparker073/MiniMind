@@ -3,7 +3,7 @@ import { ChevronDown, Sparkles, Brain, Zap } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState, useCallback } from 'react';
 import DiveAnimation from '@/components/DiveAnimation';
-import {NetworkBackground} from '@/components/NetworkBackground';
+import NeuralBackground from '@/components/NeuralBackground';
 
 const Discovery = () => {
   const navigate = useNavigate();
@@ -23,7 +23,7 @@ const Discovery = () => {
 
   return (
     <div className="min-h-screen neural-bg relative overflow-hidden">
-      <NetworkBackground />
+      <NeuralBackground />
       
       {/* Animated gradient overlay */}
       <motion.div 

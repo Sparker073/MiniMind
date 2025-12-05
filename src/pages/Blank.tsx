@@ -52,7 +52,7 @@ const Explore = () => {
             transition={{ delay: 1 }}
           >
             <Link
-              to="/discovery"
+              to="/wheelpage"
               className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors font-inter"
             >
               <motion.span animate={{ x: [-2, 2, -2] }} transition={{ duration: 1.5, repeat: Infinity }}>

@@ -1,4 +1,4 @@
-import { NetworkBackground } from "@/components/NetworkBackground";
+import  NeuralBackground  from "@/components/NeuralBackground";
 import HandGame from "@/components/HandGame";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -47,7 +47,7 @@ const GestureGame = () => {
       </button>
 
       {/* Background behind content */}
-      <NetworkBackground />
+      <NeuralBackground />
 
       {/* Main content on top */}
       <div className="relative z-10 w-full h-full flex flex-col items-center justify-center gap-6 px-4">
